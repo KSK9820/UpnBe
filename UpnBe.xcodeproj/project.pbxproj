@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5328FAB02B70C4E9002A4910 /* GrayButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAAF2B70C4E9002A4910 /* GrayButtonModifier.swift */; };
+		5328FAB42B70CC01002A4910 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAB32B70CC01002A4910 /* View+Extension.swift */; };
+		5328FAB62B70CD18002A4910 /* MainReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAB52B70CD18002A4910 /* MainReadyView.swift */; };
 		53FA36542B70837E00BEEF36 /* UpnBeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA36532B70837E00BEEF36 /* UpnBeApp.swift */; };
 		53FA36562B70837E00BEEF36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA36552B70837E00BEEF36 /* ContentView.swift */; };
 		53FA36582B70838000BEEF36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FA36572B70838000BEEF36 /* Assets.xcassets */; };
@@ -14,9 +17,13 @@
 		53FA36662B70842D00BEEF36 /* NotoSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FA36632B70842D00BEEF36 /* NotoSans-Medium.ttf */; };
 		53FA36672B70842D00BEEF36 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA36642B70842D00BEEF36 /* Font+Extension.swift */; };
 		53FA36682B70842D00BEEF36 /* NotoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53FA36652B70842D00BEEF36 /* NotoSans-ExtraBold.ttf */; };
+		53FA366F2B70BC4C00BEEF36 /* MainChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA366E2B70BC4C00BEEF36 /* MainChoiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5328FAAF2B70C4E9002A4910 /* GrayButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayButtonModifier.swift; sourceTree = "<group>"; };
+		5328FAB32B70CC01002A4910 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		5328FAB52B70CD18002A4910 /* MainReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReadyView.swift; sourceTree = "<group>"; };
 		53FA36502B70837E00BEEF36 /* UpnBe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpnBe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FA36532B70837E00BEEF36 /* UpnBeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpnBeApp.swift; sourceTree = "<group>"; };
 		53FA36552B70837E00BEEF36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,6 +32,8 @@
 		53FA36632B70842D00BEEF36 /* NotoSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Medium.ttf"; sourceTree = "<group>"; };
 		53FA36642B70842D00BEEF36 /* Font+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		53FA36652B70842D00BEEF36 /* NotoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		53FA366C2B70BBF200BEEF36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53FA366E2B70BC4C00BEEF36 /* MainChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChoiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5328FAAC2B70C40E002A4910 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				53FA36642B70842D00BEEF36 /* Font+Extension.swift */,
+				5328FAB32B70CC01002A4910 /* View+Extension.swift */,
+				5328FAB12B70CBDC002A4910 /* Components */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5328FAB12B70CBDC002A4910 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5328FAAF2B70C4E9002A4910 /* GrayButtonModifier.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		53FA36472B70837E00BEEF36 = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +84,13 @@
 		53FA36522B70837E00BEEF36 /* UpnBe */ = {
 			isa = PBXGroup;
 			children = (
+				53FA366C2B70BBF200BEEF36 /* Info.plist */,
 				53FA36532B70837E00BEEF36 /* UpnBeApp.swift */,
 				53FA36552B70837E00BEEF36 /* ContentView.swift */,
 				53FA36592B70838000BEEF36 /* Preview Content */,
 				53FA36612B70842D00BEEF36 /* Resource */,
+				5328FAAC2B70C40E002A4910 /* Extension */,
+				53FA366D2B70BC3100BEEF36 /* View */,
 			);
 			path = UpnBe;
 			sourceTree = "<group>";
@@ -86,10 +116,18 @@
 			isa = PBXGroup;
 			children = (
 				53FA36632B70842D00BEEF36 /* NotoSans-Medium.ttf */,
-				53FA36642B70842D00BEEF36 /* Font+Extension.swift */,
 				53FA36652B70842D00BEEF36 /* NotoSans-ExtraBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		53FA366D2B70BC3100BEEF36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53FA366E2B70BC4C00BEEF36 /* MainChoiceView.swift */,
+				5328FAB52B70CD18002A4910 /* MainReadyView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +203,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				53FA36562B70837E00BEEF36 /* ContentView.swift in Sources */,
+				5328FAB02B70C4E9002A4910 /* GrayButtonModifier.swift in Sources */,
 				53FA36542B70837E00BEEF36 /* UpnBeApp.swift in Sources */,
 				53FA36672B70842D00BEEF36 /* Font+Extension.swift in Sources */,
+				5328FAB62B70CD18002A4910 /* MainReadyView.swift in Sources */,
+				5328FAB42B70CC01002A4910 /* View+Extension.swift in Sources */,
+				53FA366F2B70BC4C00BEEF36 /* MainChoiceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +345,7 @@
 				DEVELOPMENT_TEAM = CX8P4D8Z7M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UpnBe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +375,7 @@
 				DEVELOPMENT_TEAM = CX8P4D8Z7M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UpnBe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
