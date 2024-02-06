@@ -1,5 +1,5 @@
 //
-//  GrayButtonModifier.swift
+//  ButtonCustomModifier.swift
 //  UpnBe
 //
 //  Created by 김수경 on 2024/02/05.
@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DisableButtonModifier: ViewModifier {
-    
     var width: CGFloat
     var height: CGFloat
     
@@ -25,7 +24,6 @@ struct DisableButtonModifier: ViewModifier {
 }
 
 struct GrayButtonModifier: ViewModifier {
-    
     var width: CGFloat
     var height: CGFloat
     
@@ -42,7 +40,6 @@ struct GrayButtonModifier: ViewModifier {
 }
 
 struct MintButtonModifier: ViewModifier {
-    
     var width: CGFloat
     var height: CGFloat
     
@@ -59,7 +56,6 @@ struct MintButtonModifier: ViewModifier {
 }
 
 struct ChangableButtonModifier: ViewModifier {
-    
     var width: CGFloat
     var height: CGFloat
     var isActive: Bool?
@@ -76,24 +72,17 @@ struct ChangableButtonModifier: ViewModifier {
     }
 }
 
-struct TextFieldModifier: ViewModifier {
-    
-    var width: CGFloat
-    var height: CGFloat
+struct FilterButtonModifier: ViewModifier {
+    var isActive: Bool
     
     func body(content: Content) -> some View {
         content
-            .font(.heading2)
-            .foregroundStyle(.basic)
-            .frameForUPNBE(width: width, height: height)
-            .background{
+            .font(.heading4)
+            .foregroundStyle(isActive ? .background : .background5)
+            .frameForUPNBE(width: 100, height: 30)
+            .background {
                 RoundedRectangle(cornerRadius: 20)
-                    .foregroundStyle(.background2)
-            }
-            .overlay {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(.background4, lineWidth: 1)
-                    .frameForUPNBE(width: width, height: height)
+                    .foregroundStyle(isActive ? .color2 : .background2)
             }
     }
 }

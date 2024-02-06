@@ -9,7 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MainChoiceView()
+        TabView {
+            Group {
+                FilterBasicView()
+                    .tabItem {
+                        Image(.iconProfileOff)
+                            .renderingMode(.template)
+                    }
+                FilterBasicView()
+                    .tabItem {
+                        Image(.iconReportOff)
+                            .renderingMode(.template)
+                    }
+                FilterBasicView()
+                    .tabItem {
+                        Image(.iconShortformOff)
+                            .renderingMode(.template)
+                    }
+                FilterBasicView()
+                    .tabItem {
+                        Image(.iconSaveOff)
+                            .renderingMode(.template)
+                    }
+                FilterBasicView()
+                    .tabItem {
+                        Image(.iconFilterOff)
+                            .renderingMode(.template)
+                    }
+            }
+            .toolbarBackground(Color(uiColor: .black), for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
+        }
+//        MainChoiceView()
     }
 }
 

@@ -49,7 +49,6 @@ struct MainChoiceView: View {
                         ForEach(buttons.indices, id: \.self) { index in
                             Button(action: {
                                 viewModel.selectedButton(sport: index)
-                                print(viewModel.selected)
                                 if buttons[index] == "Futsal" {
                                     isActive = true
                                     isSheetActive = false

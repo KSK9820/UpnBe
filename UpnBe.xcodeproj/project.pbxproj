@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5328FAB02B70C4E9002A4910 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAAF2B70C4E9002A4910 /* CustomModifiers.swift */; };
+		5328FAB02B70C4E9002A4910 /* ButtonCustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAAF2B70C4E9002A4910 /* ButtonCustomModifier.swift */; };
 		5328FAB42B70CC01002A4910 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAB32B70CC01002A4910 /* View+Extension.swift */; };
 		5328FAB62B70CD18002A4910 /* MainReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAB52B70CD18002A4910 /* MainReadyView.swift */; };
 		536831752B710DCA00A58D3C /* MainNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536831742B710DCA00A58D3C /* MainNumberView.swift */; };
+		53F0FFA52B721EBB008E602A /* FilterBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0FFA42B721EBB008E602A /* FilterBasicView.swift */; };
+		53F0FFA72B722163008E602A /* TextFieldCustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */; };
 		53FA36542B70837E00BEEF36 /* UpnBeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA36532B70837E00BEEF36 /* UpnBeApp.swift */; };
 		53FA36562B70837E00BEEF36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA36552B70837E00BEEF36 /* ContentView.swift */; };
 		53FA36582B70838000BEEF36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FA36572B70838000BEEF36 /* Assets.xcassets */; };
@@ -22,10 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5328FAAF2B70C4E9002A4910 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		5328FAAF2B70C4E9002A4910 /* ButtonCustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCustomModifier.swift; sourceTree = "<group>"; };
 		5328FAB32B70CC01002A4910 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		5328FAB52B70CD18002A4910 /* MainReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReadyView.swift; sourceTree = "<group>"; };
 		536831742B710DCA00A58D3C /* MainNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNumberView.swift; sourceTree = "<group>"; };
+		53F0FFA42B721EBB008E602A /* FilterBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBasicView.swift; sourceTree = "<group>"; };
+		53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomModifier.swift; sourceTree = "<group>"; };
 		53FA36502B70837E00BEEF36 /* UpnBe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpnBe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FA36532B70837E00BEEF36 /* UpnBeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpnBeApp.swift; sourceTree = "<group>"; };
 		53FA36552B70837E00BEEF36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,9 +66,36 @@
 		5328FAB12B70CBDC002A4910 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5328FAAF2B70C4E9002A4910 /* CustomModifiers.swift */,
+				5328FAAF2B70C4E9002A4910 /* ButtonCustomModifier.swift */,
+				53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		53F0FFA12B721E71008E602A /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				53FA366E2B70BC4C00BEEF36 /* MainChoiceView.swift */,
+				5328FAB52B70CD18002A4910 /* MainReadyView.swift */,
+				536831742B710DCA00A58D3C /* MainNumberView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		53F0FFA22B721E9B008E602A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				53F0FFA32B721EA3008E602A /* 5.Filter */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		53F0FFA32B721EA3008E602A /* 5.Filter */ = {
+			isa = PBXGroup;
+			children = (
+				53F0FFA42B721EBB008E602A /* FilterBasicView.swift */,
+			);
+			path = 5.Filter;
 			sourceTree = "<group>";
 		};
 		53FA36472B70837E00BEEF36 = {
@@ -126,9 +157,8 @@
 		53FA366D2B70BC3100BEEF36 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				53FA366E2B70BC4C00BEEF36 /* MainChoiceView.swift */,
-				5328FAB52B70CD18002A4910 /* MainReadyView.swift */,
-				536831742B710DCA00A58D3C /* MainNumberView.swift */,
+				53F0FFA22B721E9B008E602A /* TabBar */,
+				53F0FFA12B721E71008E602A /* OnBoarding */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,8 +237,10 @@
 			files = (
 				536831752B710DCA00A58D3C /* MainNumberView.swift in Sources */,
 				53FA36562B70837E00BEEF36 /* ContentView.swift in Sources */,
-				5328FAB02B70C4E9002A4910 /* CustomModifiers.swift in Sources */,
+				5328FAB02B70C4E9002A4910 /* ButtonCustomModifier.swift in Sources */,
+				53F0FFA52B721EBB008E602A /* FilterBasicView.swift in Sources */,
 				53FA36542B70837E00BEEF36 /* UpnBeApp.swift in Sources */,
+				53F0FFA72B722163008E602A /* TextFieldCustomModifier.swift in Sources */,
 				53FA36672B70842D00BEEF36 /* Font+Extension.swift in Sources */,
 				5328FAB62B70CD18002A4910 /* MainReadyView.swift in Sources */,
 				5328FAB42B70CC01002A4910 /* View+Extension.swift in Sources */,

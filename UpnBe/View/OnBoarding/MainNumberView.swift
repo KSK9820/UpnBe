@@ -42,12 +42,8 @@ struct MainNumberView: View {
                         .frameForUPNBE(width: 10, height: 0)
                     Text("미리알림받기")
                         .applyMintButtonModifier(width: 150, height: 50)
-                }
-                
-                
+                } 
             }
-            
-              
         }
     }
 }

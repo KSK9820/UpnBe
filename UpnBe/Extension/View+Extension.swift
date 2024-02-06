@@ -30,6 +30,10 @@ extension View {
     func applyTextFieldModifier(width: CGFloat, height: CGFloat) -> some View {
         return modifier(TextFieldModifier(width: width, height: height))
     }
+    
+    func applyFilterButtonModifier(isActive: Binding<Bool>) -> some View {
+        return modifier(FilterButtonModifier(isActive: isActive.wrappedValue))
+    }
 }
 
 // MARK: - device에 따른 frame 크기 변환
