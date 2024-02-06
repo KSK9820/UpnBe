@@ -10,15 +10,25 @@ import SwiftUI
 final class MainChoiceViewModel: ObservableObject {
     @Published var selected = [false, false, false, false]
     
-    func selectedButton(sport: Int){
+    func selectedButton(sport: Int) {
         selected = [false, false, false, false]
         selected[sport] = true
+    }
+    
+    func selectedSport() -> String {
+        guard let index = selected.firstIndex(of: true) else { return "" }
+        let sportName = ["축구", "농구", "배구", "수영"]
+        return sportName[index]
     }
 }
 
 struct MainChoiceView: View {
     @ObservedObject var viewModel = MainChoiceViewModel()
     @State var isActive = false
+    @State var isSheetActive = false
+    
+    let buttons = ["Futsal", "Basket", "volei", "swim"]
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         NavigationStack {
@@ -35,63 +45,49 @@ struct MainChoiceView: View {
                     Spacer()
                         .frameForUPNBE(width: 0, height: 80)
                     
-                    VStack(alignment: .center) {
-                        HStack {
+                    LazyVGrid(columns: columns) {
+                        ForEach(buttons.indices, id: \.self) { index in
                             Button(action: {
-                                viewModel.selectedButton(sport: 0)
-                                isActive = true
-                            }, label: {
-                                Image(.futsal)
+                                viewModel.selectedButton(sport: index)
+                                print(viewModel.selected)
+                                if buttons[index] == "Futsal" {
+                                    isActive = true
+                                    isSheetActive = false
+                                } else {
+                                    isActive = false
+                                    isSheetActive = true
+                                }
+                            }) {
+                                Image(buttons[index])
+                                    .resizable()
+                                    .scaledToFit()
                                     .frameForUPNBE(width: 164, height: 100)
-                            })
-                            
-                            Button(action: {
-                                viewModel.selectedButton(sport: 1)
-                                isActive = false
-                            }, label: {
-                                Image(.basket)
-                                    .frameForUPNBE(width: 164, height: 100)
-                            })
-                        }
-                        
-                        HStack {
-                            Button(action: {
-                                viewModel.selectedButton(sport: 2)
-                                isActive = false
-                            }, label: {
-                                Image(.volei)
-                                    .frameForUPNBE(width: 164, height: 100)
-                            })
-                            
-                            Button(action: {
-                                viewModel.selectedButton(sport: 3)
-                                isActive = false
-                            }, label: {
-                                Image(.swim)
-                                    .frameForUPNBE(width: 164, height: 100)
+                            }
+                            .sheet(isPresented: $isSheetActive, content: {
+                                MainNumberView(sportName: viewModel.selectedSport())
+                                    .presentationDetents([.fraction(37/74)])
+                                    .presentationDragIndicator(.visible)
                             })
                         }
-                        .horizontalPadding(direction: .horizontal, size: 10)
                     }
+                    .verticalPadding(direction: .horizontal, size: 10)
                     
                     Spacer()
-                  
-                    Button {
                     
-                    } label: {
-                        if isActive {
-                            NavigationLink(destination: MainReadyView()) {
-                                Text("다음")
-                                    .ApplyGrayButtonModifier(width: 320, height: 50, isActive: $isActive)
-                            }
-                        } else {
+                    if isActive {
+                        NavigationLink(destination: MainReadyView()) {
                             Text("다음")
-                                .font(.heading2)
-                                .ApplyGrayButtonModifier(width: 320, height: 50, isActive: nil)
+                                .applyChangableButtonModifier(width: 320, height: 50, isActive: $isActive)
+                                .horizontalPadding(direction: .horizontal, size: 20)
+                                .verticalPadding(direction: .bottom, size: 30)
                         }
+                    } else {
+                        Text("다음")
+                            .font(.heading2)
+                            .applyDisableButtonModifier(width: 320, height: 50)
+                            .horizontalPadding(direction: .horizontal, size: 20)
+                            .verticalPadding(direction: .bottom, size: 30)
                     }
-                    .horizontalPadding(direction: .horizontal, size: 20)
-                    .verticalPadding(direction: .bottom, size: 30)
                 }
             }.ignoresSafeArea()
         }

@@ -10,8 +10,25 @@ import SwiftUI
 // MARK: - CustomButton
 
 extension View {
-    func ApplyGrayButtonModifier(width: CGFloat, height: CGFloat, isActive: Binding<Bool>?) -> some View {
-        return modifier(GrayButtonModifier(width: width, height: height, isActive: isActive?.wrappedValue))
+    
+    func applyDisableButtonModifier(width: CGFloat, height: CGFloat) -> some View {
+        return modifier(DisableButtonModifier(width: width, height: height))
+    }
+    
+    func applyGrayButtonModifier(width: CGFloat, height: CGFloat) -> some View {
+        return modifier(GrayButtonModifier(width: width, height: height))
+    }
+    
+    func applyMintButtonModifier(width: CGFloat, height: CGFloat) -> some View {
+        return modifier(MintButtonModifier(width: width, height: height))
+    }
+    
+    func applyChangableButtonModifier(width: CGFloat, height: CGFloat, isActive: Binding<Bool>?) -> some View {
+        return modifier(ChangableButtonModifier(width: width, height: height, isActive: isActive?.wrappedValue))
+    }
+    
+    func applyTextFieldModifier(width: CGFloat, height: CGFloat) -> some View {
+        return modifier(TextFieldModifier(width: width, height: height))
     }
 }
 
@@ -39,6 +56,7 @@ extension View {
     func verticalPadding(direction: Edge.Set, size: CGFloat) -> some View {
         return self.padding(direction, size / 740 * Self.scene.screen.bounds.height)
     }
+    
     func horizontalPadding(direction: Edge.Set, size: CGFloat) -> some View {
         return self.padding(direction, size / 360 * Self.scene.screen.bounds.width)
     }

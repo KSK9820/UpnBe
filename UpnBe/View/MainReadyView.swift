@@ -26,7 +26,6 @@ struct MainReadyView: View {
                         .multilineTextAlignment(.center)
                         .verticalPadding(direction: .bottom, size: 109)
                     
-                    
                     VStack(alignment: .leading) {
                         HStack {
                             Image(.iconUpOn)
@@ -69,17 +68,15 @@ struct MainReadyView: View {
                     
                     NavigationLink(destination: MainReadyView()) {
                         Text("시작하기")
-                            .ApplyGrayButtonModifier(width: 320, height: 50, isActive: .constant(true))
+                            .applyMintButtonModifier(width: 320, height: 50)
                     }
                     .horizontalPadding(direction: .horizontal, size: 20)
                     .verticalPadding(direction: .bottom, size: 30)
                 }
-                
-                
             }
             .ignoresSafeArea()
         }
-                .navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden()
     }
 }
 
