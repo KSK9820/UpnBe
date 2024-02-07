@@ -27,41 +27,9 @@ struct MainReadyView: View {
                         .verticalPadding(direction: .bottom, size: 109)
                     
                     VStack(alignment: .leading) {
-                        HStack {
-                            Image(.iconUpOn)
-                                .resizable()
-                                .frameForUPNBE(width: 40, height: 40)
-                                .foregroundStyle(.white)
-                            Spacer()
-                                .frameForUPNBE(width: 19, height: 0)
-                            Text("동작을 잘 따라할 수 있다면?")
-                                .font(.heading5)
-                                .foregroundStyle(.background5)
-                        }
-                        .verticalPadding(direction: .bottom, size: 40)
-                        
-                        HStack {
-                            Image(.iconBe)
-                                .resizable()
-                                .frameForUPNBE(width: 40, height: 40)
-                            Spacer()
-                                .frameForUPNBE(width: 19, height: 0)
-                            Text("연습이 조금 더 필요하다면?")
-                                .font(.heading5)
-                                .foregroundStyle(.background5)
-                        }
-                        .verticalPadding(direction: .bottom, size: 40)
-                        
-                        HStack {
-                            Image(.iconSave)
-                                .resizable()
-                                .frameForUPNBE(width: 40, height: 40)
-                            Spacer()
-                                .frameForUPNBE(width: 19, height: 0)
-                            Text("계속 저장하고 보고 싶을땐?")
-                                .font(.heading5)
-                                .foregroundStyle(.background5)
-                        }
+                        configureIcon(image: .iconUpOn, text: "동작을 잘 따라할 수 있다면?")
+                        configureIcon(image: .iconBe, text: "연습이 조금 더 필요하다면?")
+                        configureIcon(image: .iconSave, text: "계속 저장하고 보고 싶을땐?")
                     }
                     
                     Spacer()
@@ -79,6 +47,24 @@ struct MainReadyView: View {
         .navigationBarBackButtonHidden()
     }
 }
+
+extension MainReadyView {
+    @ViewBuilder
+    private func configureIcon(image: ImageResource, text: String) -> some View {
+        HStack {
+            Image(image)
+                .resizable()
+                .frameForUPNBE(width: 40, height: 40)
+            Spacer()
+                .frameForUPNBE(width: 19, height: 0)
+            Text(text)
+                .font(.heading5)
+                .foregroundStyle(.background5)
+        }
+        .verticalPadding(direction: .bottom, size: 40)
+    }
+}
+
 
 #Preview {
     MainReadyView()

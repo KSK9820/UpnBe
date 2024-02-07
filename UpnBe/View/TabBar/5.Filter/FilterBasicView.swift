@@ -44,8 +44,6 @@ struct FilterBasicView: View {
             Color.black
             
             VStack {
-//                Spacer()
-//                    .frameForUPNBE(width: 0, height: 26)
                 Text("디비전")
                     .font(.heading4)
                     .foregroundStyle(.white)
