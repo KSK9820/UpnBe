@@ -71,7 +71,7 @@ struct FilterBasicView: View {
             }
             .background {
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(.background))
+                    .fill(Color(.background1))
                     .frameForUPNBE(width: 340, height: 600)
             }
             .horizontalPadding(direction: .horizontal, size: 10)

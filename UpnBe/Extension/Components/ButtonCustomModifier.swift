@@ -78,7 +78,7 @@ struct FilterButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.heading4)
-            .foregroundStyle(isActive ? .background : .background5)
+            .foregroundStyle(isActive ? .background1 : .background5)
             .frameForUPNBE(width: 100, height: 30)
             .background {
                 RoundedRectangle(cornerRadius: 20)

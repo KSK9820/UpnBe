@@ -16,7 +16,7 @@ struct TextFieldModifier: ViewModifier {
             .font(.heading2)
             .foregroundStyle(.basic)
             .frameForUPNBE(width: width, height: height)
-            .background{
+            .background {
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundStyle(.background2)
             }

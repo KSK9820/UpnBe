@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct UpnBeApp: App {
+    init() {
+        UITabBar.appearance().backgroundColor = .black
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()

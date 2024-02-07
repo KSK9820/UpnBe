@@ -34,24 +34,31 @@ extension View {
     func applyFilterButtonModifier(isActive: Binding<Bool>) -> some View {
         return modifier(FilterButtonModifier(isActive: isActive.wrappedValue))
     }
+    
+    func cornerRadius(_ radius: CGFloat, corners: [UIRectCorner]) -> some View {
+        let combinedCorners = corners.reduce(into: UIRectCorner()) { result, corner in
+            result.formUnion(corner)
+        }
+        return clipShape(RoundedCorner(radius: radius, corners: combinedCorners))
+    }
 }
 
 // MARK: - device에 따른 frame 크기 변환
 
 extension View {
     static var scene: UIWindowScene { UIApplication.shared.connectedScenes.first as! UIWindowScene }
-
+    
     func frameForUPNBE(width: CGFloat, height: CGFloat, alignment: Alignment = .center) -> some View {
         let width = widthForUPNBE(width: width, screenWidth: Self.scene.screen.bounds.width)
         let height = heightForUPNBE(height: height, screenHeight: Self.scene.screen.bounds.height)
         return self.frame(width: width, height: height, alignment: alignment)
     }
-
+    
     private func widthForUPNBE(width: CGFloat, screenWidth: CGFloat) -> CGFloat {
         let temp = width / 360 * screenWidth
         return temp > screenWidth ? screenWidth : temp
     }
-
+    
     private func heightForUPNBE(height: CGFloat, screenHeight: CGFloat) -> CGFloat {
         let temp = height / 740 * screenHeight
         return temp > screenHeight ? screenHeight : temp

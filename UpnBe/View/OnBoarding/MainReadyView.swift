@@ -11,7 +11,7 @@ struct MainReadyView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.background
+                Color.background1
                 VStack {
                     Spacer()
                         .frameForUPNBE(width: 0, height: 117)
