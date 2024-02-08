@@ -27,52 +27,19 @@ struct MainChoiceView: View {
     @State var isActive = false
     @State var isSheetActive = false
     
-    let buttons = ["Futsal", "Basket", "volei", "swim"]
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
-    
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.background1
+                Color.background1.ignoresSafeArea()
                 VStack {
                     Spacer()
-                        .frameForUPNBE(width: 0, height: 117)
-                    
                     Text("어떤 종목을 함께 할까요?")
                         .font(.heading1)
                         .foregroundStyle(.color1)
+                        .verticalPadding(direction: .bottom, size: 96)
                     
+                    configureButtons()
                     Spacer()
-                        .frameForUPNBE(width: 0, height: 80)
-                    
-                    LazyVGrid(columns: columns) {
-                        ForEach(buttons.indices, id: \.self) { index in
-                            Button(action: {
-                                viewModel.selectedButton(sport: index)
-                                if buttons[index] == "Futsal" {
-                                    isActive = true
-                                    isSheetActive = false
-                                } else {
-                                    isActive = false
-                                    isSheetActive = true
-                                }
-                            }) {
-                                Image(buttons[index])
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frameForUPNBE(width: 164, height: 100)
-                            }
-                            .sheet(isPresented: $isSheetActive, content: {
-                                MainNumberView(sportName: viewModel.selectedSport())
-                                    .presentationDetents([.fraction(37/74)])
-                                    .presentationDragIndicator(.visible)
-                            })
-                        }
-                    }
-                    .verticalPadding(direction: .horizontal, size: 10)
-                    
-                    Spacer()
-                    
                     if isActive {
                         NavigationLink(destination: MainReadyView()) {
                             Text("다음")
@@ -88,7 +55,52 @@ struct MainChoiceView: View {
                             .verticalPadding(direction: .bottom, size: 30)
                     }
                 }
-            }.ignoresSafeArea()
+            }
+        }
+    }
+}
+
+extension MainChoiceView {
+    
+    @ViewBuilder
+    func configureButtons() -> some View {
+        let buttons = ["Futsal", "Basket", "volei", "swim"]
+        let columns = [GridItem(.flexible()), GridItem(.flexible())]
+        
+        LazyVGrid(columns: columns) {
+            ForEach(buttons.indices, id: \.self) { index in
+                Button(action: {
+                    viewModel.selectedButton(sport: index)
+                    if buttons[index] == "Futsal" {
+                        isActive = true
+                        isSheetActive = false
+                    } else {
+                        isActive = false
+                        isSheetActive = true
+                    }
+                }) {
+                    Image(buttons[index])
+                        .resizable()
+                        .scaledToFit()
+                        .frameForUPNBE(width: 164, height: 100)
+                }
+                .sheet(isPresented: $isSheetActive, content: {
+                    MainNumberView(sportName: viewModel.selectedSport())
+                        .presentationDetents([.fraction(37/74)])
+                        .presentationDragIndicator(.visible)
+                })
+            }
+        }
+        .horizontalPadding(direction: .horizontal, size: 10)
+    }
+    
+    @ViewBuilder
+    func navigationLink() -> some View {
+        NavigationLink(destination: MainReadyView()) {
+            Text("다음")
+                .applyChangableButtonModifier(width: 320, height: 50, isActive: $isActive)
+                .horizontalPadding(direction: .horizontal, size: 20)
+                .verticalPadding(direction: .bottom, size: 30)
         }
     }
 }
@@ -96,6 +108,3 @@ struct MainChoiceView: View {
 #Preview {
     MainChoiceView()
 }
-
-
-

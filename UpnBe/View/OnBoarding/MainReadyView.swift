@@ -11,10 +11,9 @@ struct MainReadyView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.background1
+                Color.background1.ignoresSafeArea()
                 VStack {
                     Spacer()
-                        .frameForUPNBE(width: 0, height: 117)
                     
                     Text("나의 풋살 레벨은?")
                         .font(.heading1)
@@ -42,7 +41,6 @@ struct MainReadyView: View {
                     .verticalPadding(direction: .bottom, size: 30)
                 }
             }
-            .ignoresSafeArea()
         }
         .navigationBarBackButtonHidden()
     }
