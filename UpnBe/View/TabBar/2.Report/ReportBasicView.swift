@@ -20,7 +20,7 @@ final class ReportBasicViewModel {
 struct ReportBasicView: View {
     private let viewModel: ReportBasicViewModel
     
-    init(viewModel: ReportBasicViewModel) {
+    init(_ viewModel: ReportBasicViewModel) {
         self.viewModel = viewModel
     }
     
@@ -29,7 +29,7 @@ struct ReportBasicView: View {
             Color.background1
                 .ignoresSafeArea()
             VStack(spacing: 15) {
-                HeaderView(viewModel: HeaderViewModel(userInfo: UserInformation(nickName: "민첩한곰돌이", level: 12, division: "Rookie", agency: "지구대학교")))
+                ReportHeaderView(HeaderViewModel(userInfo: UserInformation(nickName: "민첩한곰돌이", level: 12, division: "Rookie", agency: "지구대학교")))
   
                 configureLevel(level: viewModel.drillLevel)
                 configureUpBoard(level: viewModel.drillLevel, max: viewModel.drillMaxLevel)
@@ -119,5 +119,5 @@ extension ReportBasicView {
 
 
 #Preview {
-    ReportBasicView(viewModel: ReportBasicViewModel())
+    ReportBasicView(ReportBasicViewModel())
 }

@@ -10,25 +10,33 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            FilterBasicView()
-                .tabItem {
-                    Image(.iconProfileOff)
-                        .renderingMode(.template)
-                }
-            if true {
+            if false {
+                ProfileJoinView()
+                    .tabItem {
+                        Image(.iconProfileOff)
+                            .renderingMode(.template)
+                    }
+            } else {
+                ProfileBasicView(ProfileHeaderViewModel())
+                    .tabItem {
+                        Image(.iconProfileOff)
+                            .renderingMode(.template)
+                    }
+            }
+            if false {
                 ReportLoginView()
                     .tabItem {
                         Image(.iconReportOff)
                             .renderingMode(.template)
                     }
             } else {
-                ReportBasicView(viewModel: ReportBasicViewModel())
-                     .tabItem {
-                         Image(.iconReportOff)
-                             .renderingMode(.template)
-                     }
+                ReportBasicView(ReportBasicViewModel())
+                    .tabItem {
+                        Image(.iconReportOff)
+                            .renderingMode(.template)
+                    }
             }
-          
+            
             FilterBasicView()
                 .tabItem {
                     Image(.iconShortformOff)

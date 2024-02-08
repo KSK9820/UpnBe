@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		531F740B2B73132700DAFE94 /* ReportBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F740A2B73132700DAFE94 /* ReportBasicView.swift */; };
-		531F740E2B73139800DAFE94 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F740D2B73139800DAFE94 /* HeaderView.swift */; };
+		531F740E2B73139800DAFE94 /* ReportHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F740D2B73139800DAFE94 /* ReportHeaderView.swift */; };
 		531F74102B73200F00DAFE94 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531F740F2B73200F00DAFE94 /* RoundedCorner.swift */; };
 		5328FAB02B70C4E9002A4910 /* ButtonCustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAAF2B70C4E9002A4910 /* ButtonCustomModifier.swift */; };
 		5328FAB42B70CC01002A4910 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAB32B70CC01002A4910 /* View+Extension.swift */; };
 		5328FAB62B70CD18002A4910 /* MainReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5328FAB52B70CD18002A4910 /* MainReadyView.swift */; };
 		536831752B710DCA00A58D3C /* MainNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536831742B710DCA00A58D3C /* MainNumberView.swift */; };
+		539ADF292B74BE01003926E5 /* ProfileJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539ADF282B74BE01003926E5 /* ProfileJoinView.swift */; };
+		539ADF2B2B74BE31003926E5 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539ADF2A2B74BE31003926E5 /* ProfileHeaderView.swift */; };
+		539ADF2D2B74D23F003926E5 /* ProfileBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539ADF2C2B74D23F003926E5 /* ProfileBasicView.swift */; };
 		53F0FFA52B721EBB008E602A /* FilterBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0FFA42B721EBB008E602A /* FilterBasicView.swift */; };
 		53F0FFA72B722163008E602A /* TextFieldCustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */; };
 		53F23B7E2B747081009B6F02 /* ReportShortfallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F23B7D2B747081009B6F02 /* ReportShortfallView.swift */; };
@@ -30,12 +33,15 @@
 
 /* Begin PBXFileReference section */
 		531F740A2B73132700DAFE94 /* ReportBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportBasicView.swift; sourceTree = "<group>"; };
-		531F740D2B73139800DAFE94 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		531F740D2B73139800DAFE94 /* ReportHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportHeaderView.swift; sourceTree = "<group>"; };
 		531F740F2B73200F00DAFE94 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		5328FAAF2B70C4E9002A4910 /* ButtonCustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCustomModifier.swift; sourceTree = "<group>"; };
 		5328FAB32B70CC01002A4910 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		5328FAB52B70CD18002A4910 /* MainReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReadyView.swift; sourceTree = "<group>"; };
 		536831742B710DCA00A58D3C /* MainNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNumberView.swift; sourceTree = "<group>"; };
+		539ADF282B74BE01003926E5 /* ProfileJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileJoinView.swift; sourceTree = "<group>"; };
+		539ADF2A2B74BE31003926E5 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		539ADF2C2B74D23F003926E5 /* ProfileBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBasicView.swift; sourceTree = "<group>"; };
 		53F0FFA42B721EBB008E602A /* FilterBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBasicView.swift; sourceTree = "<group>"; };
 		53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomModifier.swift; sourceTree = "<group>"; };
 		53F23B7D2B747081009B6F02 /* ReportShortfallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportShortfallView.swift; sourceTree = "<group>"; };
@@ -76,7 +82,8 @@
 		531F740C2B73138B00DAFE94 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
-				531F740D2B73139800DAFE94 /* HeaderView.swift */,
+				531F740D2B73139800DAFE94 /* ReportHeaderView.swift */,
+				539ADF2A2B74BE31003926E5 /* ProfileHeaderView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -101,6 +108,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		539ADF272B74BDE8003926E5 /* 1.Profile */ = {
+			isa = PBXGroup;
+			children = (
+				539ADF282B74BE01003926E5 /* ProfileJoinView.swift */,
+				539ADF2C2B74D23F003926E5 /* ProfileBasicView.swift */,
+			);
+			path = 1.Profile;
+			sourceTree = "<group>";
+		};
 		53F0FFA12B721E71008E602A /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				531F740C2B73138B00DAFE94 /* ReusableView */,
+				539ADF272B74BDE8003926E5 /* 1.Profile */,
 				531F74092B73131000DAFE94 /* 2.Report */,
 				53F0FFA32B721EA3008E602A /* 5.Filter */,
 			);
@@ -267,9 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				536831752B710DCA00A58D3C /* MainNumberView.swift in Sources */,
+				539ADF2D2B74D23F003926E5 /* ProfileBasicView.swift in Sources */,
 				53F23B7E2B747081009B6F02 /* ReportShortfallView.swift in Sources */,
 				53FA36562B70837E00BEEF36 /* ContentView.swift in Sources */,
 				5328FAB02B70C4E9002A4910 /* ButtonCustomModifier.swift in Sources */,
+				539ADF2B2B74BE31003926E5 /* ProfileHeaderView.swift in Sources */,
 				53F0FFA52B721EBB008E602A /* FilterBasicView.swift in Sources */,
 				531F74102B73200F00DAFE94 /* RoundedCorner.swift in Sources */,
 				531F740B2B73132700DAFE94 /* ReportBasicView.swift in Sources */,
@@ -278,9 +297,10 @@
 				53FA36672B70842D00BEEF36 /* Font+Extension.swift in Sources */,
 				5328FAB62B70CD18002A4910 /* MainReadyView.swift in Sources */,
 				5328FAB42B70CC01002A4910 /* View+Extension.swift in Sources */,
+				539ADF292B74BE01003926E5 /* ProfileJoinView.swift in Sources */,
 				53FA366F2B70BC4C00BEEF36 /* MainChoiceView.swift in Sources */,
 				53F23B802B74755B009B6F02 /* ReportLoginView.swift in Sources */,
-				531F740E2B73139800DAFE94 /* HeaderView.swift in Sources */,
+				531F740E2B73139800DAFE94 /* ReportHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

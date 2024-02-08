@@ -41,6 +41,10 @@ extension View {
         }
         return clipShape(RoundedCorner(radius: radius, corners: combinedCorners))
     }
+    
+    func applyProfileListButtonModifier() -> some View {
+        return modifier(ProfileListButtonModifier())
+    }
 }
 
 // MARK: - device에 따른 frame 크기 변환

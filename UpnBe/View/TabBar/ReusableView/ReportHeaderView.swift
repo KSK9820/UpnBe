@@ -1,5 +1,5 @@
 //
-//  HeaderView.swift
+//  ReportHeaderView.swift
 //  UpnBe
 //
 //  Created by 김수경 on 2024/02/07.
@@ -22,15 +22,15 @@ final class HeaderViewModel {
     }
 }
 
-struct HeaderView: View {
+struct ReportHeaderView: View {
     let viewModel: HeaderViewModel
     
-    init(viewModel: HeaderViewModel) {
+    init(_ viewModel: HeaderViewModel) {
         self.viewModel = viewModel
     }
     
     var body: some View {
-        HStack {
+        HStack(spacing: 30) {
             Image(.profile)
                 .resizable()
                 .frameForUPNBE(width: 80, height: 80)
@@ -39,6 +39,7 @@ struct HeaderView: View {
                         .fill(.background1)
                         .frameForUPNBE(width: 90, height: 90)
                 }
+                .horizontalPadding(direction: .leading, size: 30)
             
             VStack(alignment: .leading) {
                 Text(viewModel.userInfo.nickName)
@@ -65,8 +66,9 @@ struct HeaderView: View {
                     .foregroundStyle(.background1)
                 }
             }
-            .horizontalPadding(direction: .leading, size: 30)
+            Spacer()
         }
+        
         .frameForUPNBE(width: 360, height: 160)
         .background {
             Rectangle()
@@ -77,7 +79,7 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView(viewModel: HeaderViewModel(userInfo: UserInformation(nickName: "민첩한곰돌이", level: 12, division: "Rookie", agency: "지구대학교")))
+    ReportHeaderView(HeaderViewModel(userInfo: UserInformation(nickName: "민첩한곰돌이", level: 12, division: "Rookie", agency: "지구대학교")))
 }
 
 

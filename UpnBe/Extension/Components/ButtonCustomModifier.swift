@@ -86,3 +86,23 @@ struct FilterButtonModifier: ViewModifier {
             }
     }
 }
+
+struct ProfileListButtonModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        VStack(spacing: 10) {
+            HStack {
+                content
+                    .font(.paragraph2)
+                    .foregroundStyle(.background5)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    
+                    .foregroundStyle(.basic)
+                
+            }
+            Rectangle()
+                .fill(.background3)
+                .frame(height: 1)
+        }
+    }
+}
