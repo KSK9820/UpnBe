@@ -16,6 +16,8 @@
 		536831752B710DCA00A58D3C /* MainNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536831742B710DCA00A58D3C /* MainNumberView.swift */; };
 		53F0FFA52B721EBB008E602A /* FilterBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0FFA42B721EBB008E602A /* FilterBasicView.swift */; };
 		53F0FFA72B722163008E602A /* TextFieldCustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */; };
+		53F23B7E2B747081009B6F02 /* ReportShortfallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F23B7D2B747081009B6F02 /* ReportShortfallView.swift */; };
+		53F23B802B74755B009B6F02 /* ReportLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F23B7F2B74755B009B6F02 /* ReportLoginView.swift */; };
 		53FA36542B70837E00BEEF36 /* UpnBeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA36532B70837E00BEEF36 /* UpnBeApp.swift */; };
 		53FA36562B70837E00BEEF36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FA36552B70837E00BEEF36 /* ContentView.swift */; };
 		53FA36582B70838000BEEF36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FA36572B70838000BEEF36 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		536831742B710DCA00A58D3C /* MainNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNumberView.swift; sourceTree = "<group>"; };
 		53F0FFA42B721EBB008E602A /* FilterBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBasicView.swift; sourceTree = "<group>"; };
 		53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomModifier.swift; sourceTree = "<group>"; };
+		53F23B7D2B747081009B6F02 /* ReportShortfallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportShortfallView.swift; sourceTree = "<group>"; };
+		53F23B7F2B74755B009B6F02 /* ReportLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportLoginView.swift; sourceTree = "<group>"; };
 		53FA36502B70837E00BEEF36 /* UpnBe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpnBe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FA36532B70837E00BEEF36 /* UpnBeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpnBeApp.swift; sourceTree = "<group>"; };
 		53FA36552B70837E00BEEF36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				531F740A2B73132700DAFE94 /* ReportBasicView.swift */,
+				53F23B7D2B747081009B6F02 /* ReportShortfallView.swift */,
+				53F23B7F2B74755B009B6F02 /* ReportLoginView.swift */,
 			);
 			path = 2.Report;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				536831752B710DCA00A58D3C /* MainNumberView.swift in Sources */,
+				53F23B7E2B747081009B6F02 /* ReportShortfallView.swift in Sources */,
 				53FA36562B70837E00BEEF36 /* ContentView.swift in Sources */,
 				5328FAB02B70C4E9002A4910 /* ButtonCustomModifier.swift in Sources */,
 				53F0FFA52B721EBB008E602A /* FilterBasicView.swift in Sources */,
@@ -272,6 +279,7 @@
 				5328FAB62B70CD18002A4910 /* MainReadyView.swift in Sources */,
 				5328FAB42B70CC01002A4910 /* View+Extension.swift in Sources */,
 				53FA366F2B70BC4C00BEEF36 /* MainChoiceView.swift in Sources */,
+				53F23B802B74755B009B6F02 /* ReportLoginView.swift in Sources */,
 				531F740E2B73139800DAFE94 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

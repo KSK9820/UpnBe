@@ -15,11 +15,20 @@ struct ContentView: View {
                     Image(.iconProfileOff)
                         .renderingMode(.template)
                 }
-            ReportBasicView(viewModel: ReportBasicViewModel())
-                .tabItem {
-                    Image(.iconReportOff)
-                        .renderingMode(.template)
-                }
+            if true {
+                ReportLoginView()
+                    .tabItem {
+                        Image(.iconReportOff)
+                            .renderingMode(.template)
+                    }
+            } else {
+                ReportBasicView(viewModel: ReportBasicViewModel())
+                     .tabItem {
+                         Image(.iconReportOff)
+                             .renderingMode(.template)
+                     }
+            }
+          
             FilterBasicView()
                 .tabItem {
                     Image(.iconShortformOff)
