@@ -17,6 +17,7 @@
 		539ADF292B74BE01003926E5 /* ProfileJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539ADF282B74BE01003926E5 /* ProfileJoinView.swift */; };
 		539ADF2B2B74BE31003926E5 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539ADF2A2B74BE31003926E5 /* ProfileHeaderView.swift */; };
 		539ADF2D2B74D23F003926E5 /* ProfileBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539ADF2C2B74D23F003926E5 /* ProfileBasicView.swift */; };
+		53E4E8842B774B6E0063F489 /* SaveBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E4E8832B774B6E0063F489 /* SaveBasicView.swift */; };
 		53F0FFA52B721EBB008E602A /* FilterBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0FFA42B721EBB008E602A /* FilterBasicView.swift */; };
 		53F0FFA72B722163008E602A /* TextFieldCustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */; };
 		53F23B7E2B747081009B6F02 /* ReportShortfallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F23B7D2B747081009B6F02 /* ReportShortfallView.swift */; };
@@ -42,6 +43,7 @@
 		539ADF282B74BE01003926E5 /* ProfileJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileJoinView.swift; sourceTree = "<group>"; };
 		539ADF2A2B74BE31003926E5 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		539ADF2C2B74D23F003926E5 /* ProfileBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBasicView.swift; sourceTree = "<group>"; };
+		53E4E8832B774B6E0063F489 /* SaveBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBasicView.swift; sourceTree = "<group>"; };
 		53F0FFA42B721EBB008E602A /* FilterBasicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBasicView.swift; sourceTree = "<group>"; };
 		53F0FFA62B722163008E602A /* TextFieldCustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomModifier.swift; sourceTree = "<group>"; };
 		53F23B7D2B747081009B6F02 /* ReportShortfallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportShortfallView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 			path = 1.Profile;
 			sourceTree = "<group>";
 		};
+		53E4E8822B774B620063F489 /* 4. Save */ = {
+			isa = PBXGroup;
+			children = (
+				53E4E8832B774B6E0063F489 /* SaveBasicView.swift */,
+			);
+			path = "4. Save";
+			sourceTree = "<group>";
+		};
 		53F0FFA12B721E71008E602A /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 		53F0FFA22B721E9B008E602A /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				53E4E8822B774B620063F489 /* 4. Save */,
 				531F740C2B73138B00DAFE94 /* ReusableView */,
 				539ADF272B74BDE8003926E5 /* 1.Profile */,
 				531F74092B73131000DAFE94 /* 2.Report */,
@@ -300,6 +311,7 @@
 				539ADF292B74BE01003926E5 /* ProfileJoinView.swift in Sources */,
 				53FA366F2B70BC4C00BEEF36 /* MainChoiceView.swift in Sources */,
 				53F23B802B74755B009B6F02 /* ReportLoginView.swift in Sources */,
+				53E4E8842B774B6E0063F489 /* SaveBasicView.swift in Sources */,
 				531F740E2B73139800DAFE94 /* ReportHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

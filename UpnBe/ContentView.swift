@@ -42,7 +42,7 @@ struct ContentView: View {
                     Image(.iconShortformOff)
                         .renderingMode(.template)
                 }
-            FilterBasicView()
+            SaveBasicView(saveBasicViewModel())
                 .tabItem {
                     Image(.iconSaveOff)
                         .renderingMode(.template)

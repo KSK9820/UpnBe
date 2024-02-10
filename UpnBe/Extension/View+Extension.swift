@@ -45,6 +45,10 @@ extension View {
     func applyProfileListButtonModifier() -> some View {
         return modifier(ProfileListButtonModifier())
     }
+    
+    func applyTabbarButtonModifier(isActive: Binding<Bool>) -> some View {
+        return modifier(TabbarButtonModifier(isActive: isActive.wrappedValue))
+    }
 }
 
 // MARK: - device에 따른 frame 크기 변환

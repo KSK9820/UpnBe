@@ -96,7 +96,7 @@ struct ProfileListButtonModifier: ViewModifier {
                     .foregroundStyle(.background5)
                 Spacer()
                 Image(systemName: "chevron.right")
-                    
+                
                     .foregroundStyle(.basic)
                 
             }
@@ -106,3 +106,24 @@ struct ProfileListButtonModifier: ViewModifier {
         }
     }
 }
+
+struct TabbarButtonModifier: ViewModifier {
+    var isActive: Bool
+    
+    func body(content: Content) -> some View {
+        VStack {
+            content
+                .font(.heading4)
+                .foregroundStyle(.basic)
+                .background {
+                    if isActive {
+                        Rectangle()
+                            .fill(.basic)
+                            .frameForUPNBE(width: 40, height: 3)       
+                            .verticalPadding(direction: .top, size: 32)
+                    }
+                }
+        }
+    }
+}
+
