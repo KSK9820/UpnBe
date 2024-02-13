@@ -74,10 +74,13 @@ struct VideoBasicView: View {
     }
 
     var body: some View {
+        
         ZStack {
+            Color.black.ignoresSafeArea(edges: .top)
             let currentUrl = viewModel.provideURL()
             let player = AVPlayer(url: currentUrl)
             VideoPlayer(player: player)
+
                 
             HStack {
                 Spacer()
@@ -106,7 +109,6 @@ struct VideoBasicView: View {
                 self.whenever = self.viewModel.selectedStatus.whenever
                 self.save = self.viewModel.selectedStatus.save
         }
-        .ignoresSafeArea()
     }
 }
 
