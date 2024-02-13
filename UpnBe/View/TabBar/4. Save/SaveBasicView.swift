@@ -98,7 +98,6 @@ extension SaveBasicView {
                 ScrollView{
                     LazyVGrid(columns: row) {
                         ForEach(videoURL.indices, id: \.self) { index in
-                            let currentUrl = videoURL[index]
                             let player = AVPlayer(url: videoURL[index])
                             VideoPlayer(player: player)
                                 .aspectRatio(0.5, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)

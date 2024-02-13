@@ -37,7 +37,7 @@ struct ContentView: View {
                     }
             }
             
-            FilterBasicView()
+            VideoBasicView(VideoBasicViewModel())
                 .tabItem {
                     Image(.iconShortformOff)
                         .renderingMode(.template)
