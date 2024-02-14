@@ -12,9 +12,18 @@
 | --- | --- | --- |
 |<img width="432" alt="Iphone 15 (Color 1)" src="https://github.com/KSK9820/UpnBe/assets/68066104/83968faf-d3ec-41e3-9ce1-2db0d5d51a9d">|<img width="432" alt="Iphone 15 (Color 1)-2" src="https://github.com/KSK9820/UpnBe/assets/68066104/e1181bfe-35d2-487f-a7a9-1dcc2a065b7b">|<img width="432" alt="Iphone 15 (Color 1)-1" src="https://github.com/KSK9820/UpnBe/assets/68066104/e6ff2e71-4a91-4426-a6c6-2f319895732e"> |
 
-| 프로필 | 레포트 | 재생| 저장 | 필터 | 
+| 프로필 | 레포트 | 비디오 | 저장 | 필터 | 
 | --- | --- | --- | --- | --- |
 |<img width="432" alt="1" src="https://github.com/KSK9820/UpnBe/assets/68066104/ea1191ac-a5af-420e-85f3-9240c6fdd649">|![2](https://github.com/KSK9820/UpnBe/assets/68066104/d7176b82-325c-4776-8e43-5662f88439cb)|<img width="432" alt="3" src="https://github.com/KSK9820/UpnBe/assets/68066104/b6f22f0c-096f-4e71-9d97-c386dd38294d">|<img width="432" alt="4-1" src="https://github.com/KSK9820/UpnBe/assets/68066104/895b0d3b-faa6-4321-97a8-859ba5df4a62">|<img width="432" alt="5-1" src="https://github.com/KSK9820/UpnBe/assets/68066104/47763768-304c-4e47-a1ff-cc799cac43e2">|
+
+<br/>
+
+### 개별 구현 내용
+- 프로필: 로그인 여부에 따라 화면이 구분됨(ProfileJoinView, ProfileBasicView), View가 HeaderView를 하위뷰로 가지고 있음
+- 레포트: 로그인 여부에 따라 화면이 구분됨(ReportLoginView, ReportBasicView), View가 HeaderView를 하위뷰로 가지고 있음
+- 비디오: AVKit을 사용해서 비디오를 재생함, 가능 / 언젠간 / 저장 버튼을 사용해서 다음 동영상으로 전환할 수 있음
+- 저장: AVKit을 사용해서 비디오 재생, 가능 / 언젠간 / 저장 section 구분
+- 필터: 항목들을 개별적으로 하나만 선택할 수 있고, 재설정 버튼은 필터를 선택했을 때에만 나타남
 
 <br/>
 
