@@ -17,7 +17,7 @@ struct ContentView: View {
                             .renderingMode(.template)
                     }
             } else {
-                ProfileBasicView(ProfileHeaderViewModel())
+                ProfileBasicView()
                     .tabItem {
                         Image(.iconProfileOff)
                             .renderingMode(.template)
@@ -30,7 +30,7 @@ struct ContentView: View {
                             .renderingMode(.template)
                     }
             } else {
-                ReportBasicView(ReportBasicViewModel())
+                ReportBasicView()
                     .tabItem {
                         Image(.iconReportOff)
                             .renderingMode(.template)
@@ -42,7 +42,7 @@ struct ContentView: View {
                     Image(.iconShortformOff)
                         .renderingMode(.template)
                 }
-            SaveBasicView(saveBasicViewModel())
+            SaveBasicView()
                 .tabItem {
                     Image(.iconSaveOff)
                         .renderingMode(.template)

@@ -20,8 +20,8 @@ final class ReportBasicViewModel {
 struct ReportBasicView: View {
     private let viewModel: ReportBasicViewModel
     
-    init(_ viewModel: ReportBasicViewModel) {
-        self.viewModel = viewModel
+    init() {
+        self.viewModel = ReportBasicViewModel()
     }
     
     var body: some View {
@@ -119,5 +119,5 @@ extension ReportBasicView {
 
 
 #Preview {
-    ReportBasicView(ReportBasicViewModel())
+    ReportBasicView()
 }

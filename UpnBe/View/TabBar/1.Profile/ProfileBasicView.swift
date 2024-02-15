@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileBasicView: View {
     let viewModel: ProfileHeaderViewModel
     
-    init(_ viewModel: ProfileHeaderViewModel) {
+    init() {
         self.viewModel = ProfileHeaderViewModel(userInfo: ProfileUserInformation(nickName: "민첩한곰돌이", period: "12개월", party: "혼자서", training: "기술훈련"))
     }
     
@@ -44,5 +44,5 @@ extension ProfileBasicView {
 }
 
 #Preview {
-    ProfileBasicView(ProfileHeaderViewModel(userInfo: ProfileUserInformation(nickName: "민첩한곰돌이", period: "12개월", party: "혼자서", training: "기술훈련")))
+    ProfileBasicView()
 }
