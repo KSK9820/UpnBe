@@ -7,33 +7,11 @@
 
 import SwiftUI
 
-struct ProfileUserInformation {
-    var nickName: String
-    var period: String
-    var party: String
-    var training: String
-}
-
-final class ProfileHeaderViewModel {
-    var userInfo: ProfileUserInformation?
-    
-    var partyAndTraining: String? {
-        guard let party = userInfo?.party else { return nil }
-        guard let training = userInfo?.training else { return nil }
-        return "\(party) | \(training)"
-    }
-    
-    init(userInfo: ProfileUserInformation? = nil) {
-        self.userInfo = userInfo
-    }
-}
-
-
 struct ProfileHeaderView: View {
-    private let viewModel: ProfileHeaderViewModel
+    private let headerViewData: ProfileHeaderViewData
     
-    init(_ viewModel: ProfileHeaderViewModel) {
-        self.viewModel = viewModel
+    init(_ viewModel: ProfileHeaderViewData) {
+        self.headerViewData = viewModel
     }
     
     var body: some View {
@@ -49,9 +27,9 @@ struct ProfileHeaderView: View {
                     }
                 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(viewModel.userInfo?.nickName ?? "반가워요 여행자님")
-                    Text(viewModel.userInfo?.period ?? "")
-                    Text(viewModel.partyAndTraining ?? "")
+                    Text(headerViewData.userInfo?.nickName ?? "반가워요 여행자님")
+                    Text(headerViewData.userInfo?.period ?? "")
+                    Text(headerViewData.partyAndTraining ?? "")
                 }
                 .font(.heading2)
                 .foregroundStyle(.background1)
@@ -68,7 +46,7 @@ struct ProfileHeaderView: View {
                 
                 Button {
                 } label: {
-                    if viewModel.userInfo != nil {
+                    if headerViewData.userInfo != nil {
                         Text("수정")
                             .underline()
                             .font(.heading5)
@@ -88,6 +66,6 @@ struct ProfileHeaderView: View {
 }
 
 #Preview {
-//        ProfileHeaderView(ProfileHeaderViewModel(userInfo: ProfileUserInformation(nickName: "민첩한곰돌이", period: "12개월", party: "혼자서", training: "기술훈련")))
-    ProfileHeaderView(ProfileHeaderViewModel(userInfo: nil))
+//    ProfileHeaderView(ProfileHeaderViewData(userInfo: ProfileUserInformation(nickName: "민첩한곰돌이", period: "12개월", party: "혼자서", training: "기술훈련")))
+    ProfileHeaderView(ProfileHeaderViewData(userInfo: nil))
 }

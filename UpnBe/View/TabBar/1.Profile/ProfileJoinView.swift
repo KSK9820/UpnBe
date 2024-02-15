@@ -14,7 +14,7 @@ struct ProfileJoinView: View {
             Color.background1
                 .ignoresSafeArea()
             VStack {
-                ProfileHeaderView(ProfileHeaderViewModel(userInfo: nil))
+                ProfileHeaderView(ProfileHeaderViewData(userInfo: nil))
                 
                 Spacer()
                 

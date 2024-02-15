@@ -7,27 +7,6 @@
 
 import SwiftUI
 
-enum Filter: Int {
-    case division = 0
-    case drill = 1
-    case location = 2
-    case party = 3
-}
-
-final class FilterBasicViewModel: ObservableObject {
-    @Published var filterStatus: [Filter: [Bool]] = [
-        .division: [false, false, false, false, false],
-        .drill: [false, false, false, false, false],
-        .location: [false, false, false, false],
-        .party: [false, false, false]
-    ]
-    
-    func changeStatus(classify: Filter, index: Int) {
-        filterStatus[classify] = filterStatus[classify]?.map { _ in false }
-        filterStatus[classify]?[index] = true
-    }
-}
-
 struct FilterBasicView: View {
     @ObservedObject var viewModel = FilterBasicViewModel()
     

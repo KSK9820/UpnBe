@@ -7,26 +7,11 @@
 
 import SwiftUI
 
-struct UserInformation {
-    var nickName: String
-    var level: Int
-    var division: String
-    var agency: String
-}
-
-final class HeaderViewModel {
+struct ReportHeaderView: View {
     let userInfo: UserInformation
     
-    init(userInfo: UserInformation) {
-        self.userInfo = userInfo
-    }
-}
-
-struct ReportHeaderView: View {
-    let viewModel: HeaderViewModel
-    
-    init(_ viewModel: HeaderViewModel) {
-        self.viewModel = viewModel
+    init() {
+        self.userInfo = UserInformation(nickName: "민첩한곰돌이", level: 12, division: "Rookie", agency: "지구대학교")
     }
     
     var body: some View {
@@ -42,7 +27,7 @@ struct ReportHeaderView: View {
                 .horizontalPadding(direction: .leading, size: 30)
             
             VStack(alignment: .leading) {
-                Text(viewModel.userInfo.nickName)
+                Text(userInfo.nickName)
                     .font(.heading2)
                     .foregroundStyle(.background1)
                     .verticalPadding(direction: .bottom, size: 11)
@@ -58,9 +43,9 @@ struct ReportHeaderView: View {
                     .horizontalPadding(direction: .trailing, size: 10)
                     
                     VStack(alignment: .leading) {
-                        Text("\(viewModel.userInfo.level)")
-                        Text("\(viewModel.userInfo.division)")
-                        Text("\(viewModel.userInfo.agency)")
+                        Text("\(userInfo.level)")
+                        Text("\(userInfo.division)")
+                        Text("\(userInfo.agency)")
                     }
                     .font(.heading3)
                     .foregroundStyle(.background1)
@@ -68,7 +53,6 @@ struct ReportHeaderView: View {
             }
             Spacer()
         }
-        
         .frameForUPNBE(width: 360, height: 160)
         .background {
             Rectangle()
@@ -79,7 +63,7 @@ struct ReportHeaderView: View {
 }
 
 #Preview {
-    ReportHeaderView(HeaderViewModel(userInfo: UserInformation(nickName: "민첩한곰돌이", level: 12, division: "Rookie", agency: "지구대학교")))
+    ReportHeaderView()
 }
 
 

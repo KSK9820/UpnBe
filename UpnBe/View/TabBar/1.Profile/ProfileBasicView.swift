@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ProfileBasicView: View {
-    let viewModel: ProfileHeaderViewModel
+    let viewModel: ProfileHeaderViewData
     
     init() {
-        self.viewModel = ProfileHeaderViewModel(userInfo: ProfileUserInformation(nickName: "민첩한곰돌이", period: "12개월", party: "혼자서", training: "기술훈련"))
+        self.viewModel = ProfileHeaderViewData(userInfo: ProfileUserInformation(nickName: "민첩한곰돌이", period: "12개월", party: "혼자서", training: "기술훈련"))
     }
     
     var body: some View {
@@ -19,7 +19,7 @@ struct ProfileBasicView: View {
             Color.background1
                 .ignoresSafeArea()
             VStack {
-                ProfileHeaderView(ProfileHeaderViewModel(userInfo: viewModel.userInfo))
+                ProfileHeaderView(ProfileHeaderViewData(userInfo: viewModel.userInfo))
                 configureList()
                     .verticalPadding(direction: .top, size: 20)
                 Spacer()

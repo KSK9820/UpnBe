@@ -7,21 +7,11 @@
 
 import SwiftUI
 
-final class ReportBasicViewModel {
-    let drillLevelName: [String] = ["마스터링", "슈팅", "패스", "드리볼"]
-    let drillLevel = [22,18,9,11]
-    let drillMaxLevel = [64, 18, 13, 35]
-    
-    func percentageOfDrillUp(index: Int) -> CGFloat {
-        CGFloat(drillLevel[index] * 35 / 8)
-    }
-}
-
 struct ReportBasicView: View {
-    private let viewModel: ReportBasicViewModel
+    private let viewModel: ReportBasicViewData
     
     init() {
-        self.viewModel = ReportBasicViewModel()
+        self.viewModel = ReportBasicViewData()
     }
     
     var body: some View {
@@ -29,8 +19,7 @@ struct ReportBasicView: View {
             Color.background1
                 .ignoresSafeArea()
             VStack(spacing: 15) {
-                ReportHeaderView(HeaderViewModel(userInfo: UserInformation(nickName: "민첩한곰돌이", level: 12, division: "Rookie", agency: "지구대학교")))
-  
+                ReportHeaderView()
                 configureLevel(level: viewModel.drillLevel)
                 configureUpBoard(level: viewModel.drillLevel, max: viewModel.drillMaxLevel)
                 Spacer()
