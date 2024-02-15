@@ -30,10 +30,9 @@
 ## 프로젝트 파일 구조
 ```
 .
+├── README.md
 ├── UpnBe
 │   ├── ContentView.swift
-│   ├── Info.plist
-│   ├── UpnBeApp.swift
 │   ├── Extension
 │   │   ├── Components
 │   │   │   ├── ButtonCustomModifier.swift
@@ -41,28 +40,46 @@
 │   │   │   └── TextFieldCustomModifier.swift
 │   │   ├── Font+Extension.swift
 │   │   └── View+Extension.swift
-│   └── View
-│       ├── OnBoarding
-│       │   ├── MainChoiceView.swift
-│       │   ├── MainNumberView.swift
-│       │   └── MainReadyView.swift
-│       └── TabBar
-│           ├── 1.Profile
-│           │   ├── ProfileBasicView.swift
-│           │   └── ProfileJoinView.swift
-│           ├── 2.Report
-│           │   ├── ReportBasicView.swift
-│           │   ├── ReportLoginView.swift
-│           │   └── ReportShortfallView.swift
-│           ├── 3.Video
-│           │   └── VideoBasicView.swift
-│           ├── 4. Save
-│           │   └── SaveBasicView.swift
-│           ├── 5.Filter
-│           │   └── FilterBasicView.swift
-│           └── ReusableView
-│               ├── ProfileHeaderView.swift
-│               └── ReportHeaderView.swift
+│   │   └── Font
+│   │       ├── NotoSans-ExtraBold.ttf
+│   │       └── NotoSans-Medium.ttf
+│   ├── UpnBeApp.swift
+│   ├── View
+│   │   ├── OnBoarding
+│   │   │   ├── MainChoiceView.swift
+│   │   │   ├── MainNumberView.swift
+│   │   │   └── MainReadyView.swift
+│   │   └── TabBar
+│   │       ├── 1.Profile
+│   │       │   ├── ProfileBasicView.swift
+│   │       │   └── ProfileJoinView.swift
+│   │       ├── 2.Report
+│   │       │   ├── ReportBasicView.swift
+│   │       │   ├── ReportLoginView.swift
+│   │       │   └── ReportShortfallView.swift
+│   │       ├── 3.Video
+│   │       │   └── VideoBasicView.swift
+│   │       ├── 4. Save
+│   │       │   └── SaveBasicView.swift
+│   │       ├── 5.Filter
+│   │       │   └── FilterBasicView.swift
+│   │       └── ReusableView
+│   │           ├── ProfileHeaderView.swift
+│   │           └── ReportHeaderView.swift
+│   └── ViewModel
+│       ├── DTO
+│       │   ├── ProfileUserInformation.swift
+│       │   └── UserInformation.swift
+│       ├── Enum
+│       │   ├── ButtonType.swift
+│       │   ├── Filter.swift
+│       │   └── saveTabStatus.swift
+│       ├── FilterBasicViewModel.swift
+│       ├── VideoBasicViewModel.swift
+│       └── ViewData
+│           ├── ProfileHeaderViewData.swift
+│           ├── ReportBasicViewData.swift
+│           └── saveBasicViewData.swift
 ```
 <br/>
 
